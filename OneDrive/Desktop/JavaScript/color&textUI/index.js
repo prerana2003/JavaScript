@@ -59,15 +59,10 @@ const renderUI = () =>{
     entany.textContent = "Enter anything: "
     formdiv.appendChild(entany)
 
-    // let inpdiv = document.createElement("div")
-    // inpdiv.setAttribute("id","inp_div")
-    // formdiv.appendChild(inpdiv)
-
     let input = document.createElement("input")
     input.setAttribute("type", "text")
     input.setAttribute("id","inp_No")
     formdiv.appendChild(input)
-
 
     let submit = document.createElement('button');
     submit.setAttribute("type", "submit")
@@ -79,7 +74,7 @@ const renderUI = () =>{
     let reset = document.createElement('button');
     reset.setAttribute("type", "reset")
     reset.setAttribute("id", "reset_Btn")
-    reset.addEventListener('click', resetbtn);
+    reset.addEventListener('click', renderUI);
     reset.textContent = "Reset"
     formdiv.appendChild(reset) 
 
@@ -135,12 +130,3 @@ function display() {
         res.innerHTML = input
     }
 }
-
-function resetbtn(){
-    let input = document.getElementById("inp_No");
-    input.value = ""
-}  
-
-
-
-
